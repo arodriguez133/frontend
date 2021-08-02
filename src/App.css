@@ -54,8 +54,8 @@ h3 {
   height: 34rem;
 }
 
-.about-container {
-  background-image: url("./assets/about.jpg");
+.form-container {
+  background-image: url("./assets/market.png");
   background-size: cover;
   background-position: 25% 25%;
   height: 39rem;
@@ -84,4 +84,8 @@ h3 {
 
 .progress {
   color: black;
+}
+
+label{
+  padding-bottom: 15px;
 }
