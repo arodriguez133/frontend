@@ -2,33 +2,10 @@ import React from "react";
 import {useState, useEffect} from "react"
 import * as yup from "yup";
 import axios from "axios";
-import styled from "styled-components";
 
-const LabelDisplay = styled.div`
-  color:whitesmoke;
-  font-family: "Arial Black";
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  padding: 10px 0px;
-  text-align: center;
-  padding: 10rem;
-  float: left;
-`
-  const ButtonDisplay = styled.button` 
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  padding: 10px 60px;
-  border-radius: 5px;
-  margin: 10px 0px;
-  cursor: pointer;
-  &:disabled {
-    color: grey;
-    opacity: 0.7;
-    cursor: default;`
+
+
+
 
 
 let schema = yup.object().shape({
@@ -137,19 +114,13 @@ export default function SignUp() {
 
     })
     return (
-        <React.Fragment>
-            <div
-                className={
-                    "form-container bg-black w-screen text-center flex flex-col justify-center align-center leading-5"
-                }
-            >
-                {" "}
-                <h1 className={"text-white mt-20 mx-auto text-5xl"} style={{textShadow: '0 0 1rem black'}}>
+        
+            <div className="sigup-form">
+                <h1>
                     Create a Market Place Account
                 </h1>
-                 .
                 <form onSubmit={submit}>
-                    <LabelDisplay>
+                    <div>
                         <label>
                             User:
                             <input type = "text" name = "username" value = {form.username} onChange={onChange}/>
@@ -177,18 +148,11 @@ export default function SignUp() {
                             <input type = "checkbox" name = "isOwner" value = {form.isOwner} onChange={onChange}/>
                         </label>
                         <div className="submitButton">
-                            <ButtonDisplay onSubmit={submit} disabled={disabled}>Submit</ButtonDisplay>
+                            <button onSubmit={submit} disabled={disabled}>Submit</button>
                         </div>
-                    </LabelDisplay>
+                    </div>
                 </form>
 
             </div>
-            <div
-                className={
-                    "bg-white h-96 w-screen flex flex-col justify-center text-center align-center"
-                }
-            ></div>
-
-        </React.Fragment>
     );
 }

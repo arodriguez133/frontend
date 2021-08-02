@@ -61,12 +61,7 @@ h3 {
   height: 39rem;
 }
 
-.signup-container {
-  background-image: url("./assets/signup.png");
-  background-size: cover;
-  background-position: center center;
-  height: 39rem;
-}
+
 
 .nutrition-container {
   background-image: url("./assets/nutrition.jpg");
